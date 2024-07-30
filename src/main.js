@@ -7,20 +7,20 @@ function onCheck(e) {
   const { target } = e;
   let transformStyle = '';
 
-  if (target.value === 'matrix' && target.checked) {
-    [].filter.call(document.getElementsByName('tranStyle'), el => el.checked).forEach(el => {
-      if (el.value !== 'matrix') el.checked = false;
-    });
-    imgGood.style.transform = transformStyle = `matrix(2, 1.5, -1.5, 2, 60, 60)`;
-    pUsingStyle.innerText = transformStyle;
-    return;
-  }
-  document.querySelector('#chkMatrix').checked = false;
+  // if (target.value === 'matrix' && target.checked) {
+  //   [].filter.call(document.getElementsByName('tranStyle'), el => el.checked).forEach(el => {
+  //     if (el.value !== 'matrix') el.checked = false;
+  //   });
+  //   imgGood.style.transform = transformStyle = `matrix(2, 1.5, -1.5, 2, 60, 60)`;
+  //   pUsingStyle.innerText = transformStyle;
+  //   return;
+  // }
+  // document.querySelector('#chkMatrix').checked = false;
 
-  const values = [].filter.call(document.getElementsByName('tranStyle'), el => el.checked).map(el => el.value);
+  const values = [].filter.call(checkboxes, el => el.checked).map(el => el.value);
   console.log('values', values);
 
-  for (value of values) {
+  for (var value of values) {
     switch (value) {
       case 'rotate':
         transformStyle += ` rotate(45deg)`;
@@ -33,6 +33,9 @@ function onCheck(e) {
         break;
       case 'scale':
         transformStyle += ` scale(2)`;
+        break;
+      case 'matrix':
+        transformStyle += ` matrix(2, 1.5, -1.5, 2, 60, 60)`;
         break;
     }
   }

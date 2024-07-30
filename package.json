@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run css | vite",
-    "css": "npx tailwindcss -i ./src/assets/css/tailwind.css -o ./src/assets/css/index.css --watch"
+    "dev": "npm run css -- --watch | vite",
+    "css": "npx tailwindcss -i ./src/assets/css/tailwind.css -o ./src/assets/css/index.css",
+    "build": "npm run css && vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
