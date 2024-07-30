@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <script type="module" crossorigin src="/assets/index-CEeQPftx.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BGzuPRUv.css">
+</head>
+
+<body class="w-screen h-screen">
+  <style>
+    #imgGood {
+      transition: all 0.5s ease-in-out;
+    }
+  </style>
+  <div id="app" class="w-full h-full bg-gray-100
+    flex justify-center items-center
+  ">
+    <div class="flex justify-center rounded bg-blue-100 shadow">
+
+      <div class="form-box w-96 bg-blue-50 p-4">
+        <ul>
+          <li class="my-2 cursor-pointer">
+            <input id="chkRotate" type="checkbox" name="tranStyle" value="rotate" class="cursor-pointer">
+            <label for="chkRotate" class="cursor-pointer">Rotate: 45deg</label>
+            </input>
+          </li>
+
+          <li class="my-2">
+            <input id="chkSkew" type="checkbox" name="tranStyle" value="skew" class="cursor-pointer">
+            <label for="chkSkew" class="cursor-pointer">Skew: 45deg</label>
+            </input>
+          </li>
+
+          <li class="my-2 cursor-pointer">
+            <input id="chkScale" type="checkbox" name="tranStyle" value="scale" class="cursor-pointer">
+            <label for="chkScale" class="cursor-pointer">Scale: 2</label>
+            </input>
+          </li>
+
+          <li class="my-2 cursor-pointer">
+            <input id="chkTranslate" type="checkbox" name="tranStyle" value="translate" class="cursor-pointer">
+            <label for="chkTranslate" class="cursor-pointer">Translate: { x: 60px, y: 60px }</label>
+            </input>
+          </li>
+
+          <li class="my-2 cursor-pointer">
+            <hr class="my-4">
+            <input id="chkMatrix" type="checkbox" name="tranStyle" value="matrix" class="cursor-pointer">
+            <label for="chkMatrix" class="cursor-pointer">Matrix: (2, 1.5, -1.5, 2, 60, 60)</label>
+            </input>
+          </li>
+        </ul>
+
+        <div class="mt-6">
+          <label for="pUsingStyle" class="mt-10">图片的 Transform 样式：</label>
+          <p id="pUsingStyle" class="w-full min-h-14 px-2 py-1 bg-gray-200 rounded-sm">&nbsp;</p>
+        </div>
+      </div>
+
+      <div class="img-box w-80">
+        <img id="imgGood" src="/assets/t-good-BqNCYZYk.png" alt="t-good"
+          class="w-24 h-24 bg-white" />
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
